@@ -15,7 +15,7 @@ func RandomString(length int) string {
 	result := make([]byte, length)
 
 	for i := 0; i < length; i++ {
-		nBig, err := rand.Int(rand.Reader, big.NewInt(int64(length)))
+		nBig, err := rand.Int(rand.Reader, big.NewInt(int64(len(source))))
 		if err != nil {
 			log.Println(err)
 		}
@@ -30,7 +30,7 @@ func RandomStringInt(length int) string {
 	result := make([]byte, length)
 
 	for i := 0; i < length; i++ {
-		nBig, err := rand.Int(rand.Reader, big.NewInt(int64(length)))
+		nBig, err := rand.Int(rand.Reader, big.NewInt(int64(len(source))))
 		if err != nil {
 			log.Println(err)
 		}
@@ -45,7 +45,7 @@ func RandomStringAndInt(length int) string {
 	result := make([]byte, length)
 
 	for i := 0; i < length; i++ {
-		nBig, err := rand.Int(rand.Reader, big.NewInt(int64(length)))
+		nBig, err := rand.Int(rand.Reader, big.NewInt(int64(len(source))))
 		if err != nil {
 			log.Println(err)
 		}
